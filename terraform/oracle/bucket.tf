@@ -8,8 +8,6 @@ resource "oci_objectstorage_bucket" "secretsquirrel" {
   namespace             = data.oci_objectstorage_namespace.example.namespace
   object_events_enabled = false
   access_type           = "ObjectRead"
-  metadata              = { "data" = "Blockofdata" }
-  storage_tier          = "Standard"
   freeform_tags = {
     git_commit           = "7a7b957091945f77ecef712a92ac719c8d9a6498"
     git_file             = "terraform/oracle/bucket.tf"
