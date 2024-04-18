@@ -28,6 +28,7 @@ resource "aws_rds_cluster" "app2-rds-cluster" {
     git_repo             = "terragoat"
     yor_trace            = "d33c9292-952b-4c1f-9973-b6dbad519461"
   }
+  enabled_cloudwatch_logs_exports = "CKV_ANY"
 }
 
 resource "aws_rds_cluster" "app3-rds-cluster" {
@@ -92,6 +93,7 @@ resource "aws_rds_cluster" "app6-rds-cluster" {
     git_repo             = "terragoat"
     yor_trace            = "fcffb961-d859-4be5-997f-d51b50665ada"
   }
+  enabled_cloudwatch_logs_exports = "CKV_ANY"
 }
 
 resource "aws_rds_cluster" "app7-rds-cluster" {
