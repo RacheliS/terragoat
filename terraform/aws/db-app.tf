@@ -19,7 +19,6 @@ resource "aws_db_instance" "default" {
   storage_encrypted       = false
   skip_final_snapshot     = true
   monitoring_interval     = 0
-  publicly_accessible     = true
 
   tags = merge({
     Name        = "${local.resource_prefix.value}-rds"
@@ -39,6 +38,7 @@ resource "aws_db_instance" "default" {
   lifecycle {
     ignore_changes = ["password"]
   }
+  performance_insights_enabled = true
 }
 
 resource "aws_db_option_group" "default" {
