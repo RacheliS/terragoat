@@ -422,3 +422,14 @@ output "db_endpoint" {
   value       = aws_db_instance.default.endpoint
 }
 
+resource "aws_s3_bucket_object" "data_object_liran3" {
+  bucket = "lirans_bucket3"
+  region        = "us-west-2"
+  key    = "customer-master.xlsx"
+  source = "resources/customer-master.xlsx"
+  tags = {
+    Name        = "string-customer-master"
+    Environment = "some-string"
+  }
+}
+
