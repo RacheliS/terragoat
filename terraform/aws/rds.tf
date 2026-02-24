@@ -127,6 +127,7 @@ resource "aws_rds_cluster" "app8-rds-cluster" {
 
   }
   storage_encrypted = true
+  iam_database_authentication_enabled = true
 }
 
 resource "aws_rds_cluster" "app9-rds-cluster" {
